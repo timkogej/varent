@@ -391,8 +391,8 @@ export default function Home() {
               </span>
               <div className="flex flex-col gap-1">
                 {[
-                  { name: "Nicola", tel: "+393473181259", display: "+39.347.3181259" },
-                  { name: "Bojan",  tel: "+38640130309",  display: "+386.40.130309" },
+                  { name: "Nicola", tel: "+393473181259", display: "+39 347 3181259" },
+                  { name: "Bojan",  tel: "+38640130309",  display: "+386 40 130309" },
                 ].map(({ name, tel, display }) => (
                   <a
                     key={name}
