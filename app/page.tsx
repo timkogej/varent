@@ -491,7 +491,7 @@ export default function Home() {
 
       {/* ── Footer — centred ── */}
       <motion.footer
-        className="flex flex-col items-center pb-5 px-6 w-full"
+        className="flex flex-col items-center pb-14 md:pb-5 px-6 w-full"
         {...fade(0.8)}
       >
         <div
