@@ -80,7 +80,7 @@ export default function Home() {
         style={{
           height: "3px",
           background:
-            "linear-gradient(90deg, #0D1F3C 0%, #1A4A8A 35%, #4A9FD4 65%, #F5C030 100%)",
+            "linear-gradient(90deg, #0D1F3C 0%, #1A4A8A 35%, #4A9FD4 65%, #FFE030 100%)",
         }}
       />
 
@@ -153,7 +153,7 @@ export default function Home() {
             style={{
               fontFamily: "var(--font-dm-sans)",
               color: lang === l ? "#0D1F3C" : "#6B7A99",
-              background: lang === l ? "#F5C030" : "transparent",
+              background: lang === l ? "#FFE030" : "transparent",
               borderRadius: 3,
               letterSpacing: "0.1em",
             }}
@@ -250,7 +250,7 @@ export default function Home() {
             style={{
               height: 4,
               width: 112,
-              background: "#F5C030",
+              background: "#FFE030",
               borderRadius: 2,
               transformOrigin: "center",
             }}
@@ -329,7 +329,7 @@ export default function Home() {
                     width: 10,
                     height: 10,
                     borderRadius: "50%",
-                    background: "#F5C030",
+                    background: "#FFE030",
                     boxShadow: "0 0 0 3px rgba(245,192,48,0.2)",
                   }}
                 />

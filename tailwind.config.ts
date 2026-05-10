@@ -12,7 +12,7 @@ const config: Config = {
         navy: "#0D1F3C",
         "blue-mid": "#1A4A8A",
         "blue-light": "#4A9FD4",
-        yellow: "#F5C030",
+        yellow: "#FFE030",
         white: "#FFFFFF",
         muted: "#6B7A99",
       },
