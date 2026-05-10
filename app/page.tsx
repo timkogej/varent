@@ -178,15 +178,14 @@ export default function Home() {
           {...fade(0.1)}
         >
           {/* Logo 1 — main */}
-          <div className="flex-shrink-0">
-            <LogoPlaceholder
-              src="/LOGO NB29N.jpg"
-              alt="VA Rent logo"
-              width={340}
-              height={92}
-              label="Logo (2883×783)"
-            />
-          </div>
+          <LogoPlaceholder
+            src="/LOGO NB29N.jpg"
+            alt="VA Rent logo"
+            width={340}
+            height={92}
+            label="Logo (2883×783)"
+            className="w-[180px] md:w-[340px]"
+          />
 
           {/* Vertical divider on desktop */}
           <div
@@ -199,15 +198,14 @@ export default function Home() {
           />
 
           {/* Logo 2 — secondary */}
-          <div className="flex-shrink-0">
-            <LogoPlaceholder
-              src="/VARENTlogo.jpg"
-              alt="Manutecnica logo"
-              width={240}
-              height={89}
-              label="Logo (2037×758)"
-            />
-          </div>
+          <LogoPlaceholder
+            src="/VARENTlogo.jpg"
+            alt="Manutecnica logo"
+            width={240}
+            height={89}
+            label="Logo (2037×758)"
+            className="w-[140px] md:w-[240px]"
+          />
         </motion.div>
 
         {/* Divider line — expands from centre */}
@@ -534,20 +532,21 @@ function LogoPlaceholder({
   width,
   height,
   label,
+  className = "",
 }: {
   src: string;
   alt: string;
   width: number;
   height: number;
   label: string;
+  className?: string;
 }) {
   const [hasError, setHasError] = useState(false);
 
   return (
     <div
+      className={className}
       style={{
-        width: "100%",
-        maxWidth: width,
         aspectRatio: `${width} / ${height}`,
         filter: "drop-shadow(0 2px 12px rgba(13,31,60,0.10))",
         position: "relative",
