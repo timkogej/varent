@@ -174,7 +174,7 @@ export default function Home() {
 
         {/* Logos */}
         <motion.div
-          className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-7 w-full"
+          className="flex flex-row items-center justify-center gap-4 md:gap-10 mb-7 w-full"
           {...fade(0.1)}
         >
           {/* Logo 1 — main */}
@@ -184,12 +184,12 @@ export default function Home() {
             width={340}
             height={92}
             label="Logo (2883×783)"
-            className="w-[180px] md:w-[340px]"
+            className="w-[145px] md:w-[340px]"
           />
 
-          {/* Vertical divider on desktop */}
+          {/* Vertical divider */}
           <div
-            className="hidden md:block self-stretch w-px"
+            className="self-stretch w-px flex-shrink-0"
             style={{
               background: "linear-gradient(to bottom, transparent, #4A9FD4 30%, #4A9FD4 70%, transparent)",
               opacity: 0.3,
@@ -204,7 +204,7 @@ export default function Home() {
             width={240}
             height={89}
             label="Logo (2037×758)"
-            className="w-[140px] md:w-[240px]"
+            className="w-[115px] md:w-[240px]"
           />
         </motion.div>
 
