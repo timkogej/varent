@@ -101,7 +101,7 @@ export default function Home() {
 
       {/* ── Corner bracket — top-left ── */}
       <motion.div
-        className="absolute top-6 left-6 pointer-events-none"
+        className="hidden md:block absolute top-6 left-6 pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
@@ -112,7 +112,7 @@ export default function Home() {
 
       {/* ── Corner bracket — top-right ── */}
       <motion.div
-        className="absolute top-6 right-6 pointer-events-none"
+        className="hidden md:block absolute top-6 right-6 pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
@@ -123,7 +123,7 @@ export default function Home() {
 
       {/* ── Corner bracket — bottom-left ── */}
       <motion.div
-        className="absolute bottom-6 left-6 pointer-events-none"
+        className="hidden md:block absolute bottom-6 left-6 pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
@@ -134,7 +134,7 @@ export default function Home() {
 
       {/* ── Corner bracket — bottom-right ── */}
       <motion.div
-        className="absolute bottom-6 right-6 pointer-events-none"
+        className="hidden md:block absolute bottom-6 right-6 pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
@@ -145,7 +145,7 @@ export default function Home() {
 
       {/* ── Language switcher ── */}
       <motion.div
-        className="absolute top-14 right-8 z-30 flex items-center gap-0.5"
+        className="absolute top-4 md:top-14 right-8 z-30 flex items-center gap-0.5"
         {...fade(0.2)}
       >
         {(["it", "sl", "en"] as Lang[]).map((l, i) => (
