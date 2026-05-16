@@ -18,6 +18,7 @@ const content = {
     email: "Email",
     copyright:
       "© 2026 VA Rent by Manutecnica d.o.o. — Tutti i diritti riservati",
+    avtonetLabel: "I nostri veicoli disponibili su",
   },
   sl: {
     tagline: "Premium najem vozil",
@@ -29,6 +30,7 @@ const content = {
     phone: "Telefon",
     email: "E-pošta",
     copyright: "© 2026 VA Rent by Manutecnica d.o.o. — Vse pravice pridržane",
+    avtonetLabel: "Naša vozila na voljo na",
   },
   en: {
     tagline: "Premium vehicle rental",
@@ -41,6 +43,7 @@ const content = {
     email: "Email",
     copyright:
       "© 2026 VA Rent by Manutecnica d.o.o. — All rights reserved",
+    avtonetLabel: "Our available vehicles on",
   },
 };
 
@@ -170,7 +173,7 @@ export default function Home() {
       </motion.div>
 
       {/* ── Main content — centred vertically & horizontally ── */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-10 pb-4 w-full">
+      <div className="flex-1 flex flex-col items-center justify-start md:justify-center text-center px-6 pt-20 md:pt-10 pb-4 w-full">
 
         {/* Logos */}
         <motion.div
@@ -363,7 +366,7 @@ export default function Home() {
 
         {/* Contact row — centred */}
         <motion.div
-          className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 mt-6"
+          className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 mt-4"
           {...fade(0.7)}
         >
           {/* Phone */}
@@ -487,6 +490,47 @@ export default function Home() {
             </motion.div>
           </AnimatePresence>
         </motion.div>
+
+        {/* Avto.net listings link */}
+        <motion.div
+          className="flex flex-col items-center mt-4"
+          {...fade(0.9)}
+        >
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={`avtonet-label-${lang}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: textVisible ? 1 : 0 }}
+              transition={{ duration: 0.15 }}
+              style={{
+                fontFamily: "var(--font-dm-sans)",
+                fontSize: "0.65rem",
+                color: "var(--text-muted)",
+                letterSpacing: "0.1em",
+                display: "block",
+                marginBottom: "0.4rem",
+              }}
+            >
+              {t.avtonetLabel}
+            </motion.span>
+          </AnimatePresence>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <a
+            href="https://www.avto.net/Ads/results.asp?znamka=&model=&modelID=&tip=&znamka2=&model2=&tip2=&znamka3=&model3=&tip3=&cenaMin=0&cenaMax=999999&letnikMin=0&letnikMax=2090&bencin=0&starost2=999&oblika=0&ccmMin=0&ccmMax=99999&mocMin=0&mocMax=999999&kmMin=0&kmMax=9999999&kwMin=0&kwMax=999999&motortakt=0&motorvalji=0&lokacija=0&sirina=0&dolzina=&dolzinaMIN=0&dolzinaMAX=100&nosilnostMIN=0&nosilnostMAX=999999&sedezevMIN=0&sedezevMAX=9&lezisc=&presek=0&premer=0&col=0&vijakov=0&EToznaka=0&vozilo=&airbag=&barva=&barvaint=&doseg=0&BkType=0&BkOkvir=0&BkOkvirType=0&Bk4=0&EQ1=1000000000&EQ2=1000000000&EQ3=1000000000&EQ4=100000000&EQ5=1000000000&EQ6=1000001000&EQ7=1110100122&EQ8=1010000000&EQ9=1000000020&EQ10=1000000000&EQ11=1000000000&KAT=1010000000&PIA=&PIAzero=&PIAOut=&PSLO=&akcija=0&paketgarancije=0&broker=21689&prikazkategorije=0&kategorija=0&ONLvid=0&ONLnak=0&zaloga=10&arhiv=0&presort=&tipsort=&stran="
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block", lineHeight: 0 }}
+          >
+            <img
+              src="/avtonet.logotip.jpg"
+              alt="Avto.net"
+              width={120}
+              height={60}
+              className="avtonet-logo"
+              style={{ width: 120, height: 60, objectFit: "contain" }}
+            />
+          </a>
+        </motion.div>
       </div>
 
       {/* ── Footer — centred ── */}
@@ -548,7 +592,6 @@ function LogoPlaceholder({
       className={className}
       style={{
         aspectRatio: `${width} / ${height}`,
-        filter: "drop-shadow(0 2px 12px rgba(13,31,60,0.10))",
         position: "relative",
       }}
     >

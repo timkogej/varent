@@ -17,6 +17,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #ffffff;
 }
 
 @media (max-width: 767px) {
@@ -38,4 +39,12 @@ body {
 
 .lang-text.fading {
   opacity: 0;
+}
+
+.avtonet-logo {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.avtonet-logo:hover {
+  opacity: 1;
 }
